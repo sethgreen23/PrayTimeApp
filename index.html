@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praytime App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <header class="header">
+        <div class="logo">PrayTime App</div>
+        <div class="city-container">
+          <div class="city-name">Mateur</div>
+          <div class="date">MONDAY 23,2023</div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="pray-cards">
+          
+          <div class="pray-card" id="fajr">
+            <div class="pray-name">FAJR</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+          <div class="pray-card" id="chourouk">
+            <div class="pray-name">CHOROUK</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+          <div class="pray-card" id="dohr">
+            <div class="pray-name">DOHR</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+          <div class="pray-card" id="asr">
+            <div class="pray-name">ASR</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+          <div class="pray-card" id="maghrib">
+            <div class="pray-name">MAGHRIB</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+          <div class="pray-card" id="isha">
+            <div class="pray-name">ISHA</div>
+            <div class="pray-time">04:20 AM</div>
+          </div>
+        </div>
+        <div class="pray-cities-container">
+          <div class="pray-cities" tabindex="0">
+            <div class="placeholder">City</div>
+            <ul class="pray-cities-list">
+              <li onclick="selectCity(this)" class="pray-city">Mateur</li>
+              <li onclick="selectCity(this)" class="pray-city">Bizerte</li>
+              <li onclick="selectCity(this)" class="pray-city">Gabes</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
