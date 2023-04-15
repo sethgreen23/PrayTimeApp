@@ -1,0 +1,199 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-1:'Poppins', sans-serif;
+  --ff-2:'Comforter Brush', cursive;
+
+  --blue-dark:#04061F;
+  --blue-light:#0C1147;
+  --logo:#2f3796;
+  --dark-gray:#43495F;
+  --white:#E6F1FF;
+  --light-gray:#5A6695;
+  --brown:#B86E51;
+  --yellow:#EDA451;
+  --lighter-gray:#A3AAD4;
+
+  --br-10:1rem;
+  --br-15:1.5rem;
+  --br-8:0.8rem;
+  --br-5:0.5rem;
+  --br-circle:50%;
+
+  --lh:1.7rem;
+
+
+}
+
+html{
+  scroll-behavior: smooth;
+  font-size:62.5%;
+
+}
+
+body{
+  font-size:1.5rem;
+  font-family: var(--ff-1);
+  background:linear-gradient(to right, var(--blue-dark), var(--blue-light));
+  min-height:100vh;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  background:var(--white);
+  width:80%;
+  max-width: 1200px;
+  border-radius: var(--br-15);
+  /* overflow: hidden; */
+  padding:50px;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.header{
+  /* background:orange; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 30px;
+}
+.city-container {
+  text-align: center;
+  color:var(--blue-light)
+}
+.city-name{
+  font-size:2.8rem;
+  font-weight:500;
+}
+.logo{
+  font-size:3rem;
+  font-weight: 700;
+  color:var(--dark-gray)
+}
+.pray-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+
+  gap:30px;
+}
+.pray-card{
+  background:#fff;;
+  box-shadow: 0 2px 5px rgba(135,135,135,.3);
+  border-radius: var(--br-5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height:150px;
+}
+.pray-name{
+  margin-block-start: 30px;
+  margin-block-end: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color:var(--dark-gray)
+}
+.pray-time{
+  color:#2f3796;
+  font-weight: 600;
+  font-size:2rem;
+}
+
+.pray-cities-container{
+  margin-block-start: 30px;
+}
+.pray-cities {
+  width: 250px;
+  margin-inline: auto;
+  height: 40px;
+  /* overflow: hidden; */
+  position: relative;
+}
+.placeholder{
+  background: #fff;
+  height:100%;
+  line-height: 40px;
+  /* background:green; */
+  padding-inline-start: 10px;
+  position: relative;
+  color: #04061F;
+  box-shadow: 0 2px 5px rgba(135,135,135,.2);
+  border-radius: var(--br-5);
+  cursor: pointer;
+}
+.placeholder::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  transform: rotate(45deg);
+  right: 10px;
+  top: 15px;
+  transition:all .2s;
+}
+.pray-cities.active .placeholder::after{
+  transform: translateY(-3px) rotate(-135deg);
+}
+.pray-cities-list{
+  background: #fff;
+  color: #04061F;
+  box-shadow: 0 2px 5px rgba(135,135,135,.2);
+  position:absolute; 
+  top:50px;
+  width:100%;
+  list-style: none;
+  border-radius: var(--br-5);
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s;
+  height:100px;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
+.pray-cities.active .pray-cities-list{
+  visibility: visible;
+  opacity: 1;
+}
+.pray-city{
+  padding:5px;
+  cursor: pointer;
+  
+}
+.pray-city:hover{
+  background:var(--blue-light);
+  color:#fff;
+}
+
+@media screen and (max-width:530px){
+  body{
+    padding:30px;
+  }
+  .container{
+    margin-block-start: 40px;
+    width:95%;
+  }
+  .header{
+    flex-direction: column;
+    gap:30px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .logo{
+    font-size:2.5rem;
+  }
+  .pray-cities{
+    font-size:1.2rem;
+    width:auto;
+  }
+}
